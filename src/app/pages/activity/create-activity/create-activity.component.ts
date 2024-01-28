@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-create-activity',
-  standalone: true,
   templateUrl: './create-activity.component.html',
   styleUrl: './create-activity.component.css'
 })

@@ -1,8 +1,6 @@
-import { ApplicationConfig, NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes, provideRouter } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { CreateActivityComponent } from './pages/activity/create-activity/create-activity.component';
-import { ListActivityComponent } from './pages/activity/list-activity/list-activity.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,9 +10,10 @@ const routes: Routes = [
     path: 'listActivity',
     loadChildren: () => import('./pages/activity/list-activity/list-activity.module').then(m => m.ListActivityModule),
   },
-  // Você pode adicionar mais rotas aqui conforme necessário
 ];
 
-export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
-};
+@NgModule({
+  imports: [RouterModule.forRoot(routes)], // Importe RouterModule.forRoot() aqui
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
