@@ -1,0 +1,22 @@
+@import '../../../stylesVariables.scss';
+
+nav {
+  background-color: $secondary-color;
+  width: 10rem;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+a {
+  color: $black-color;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
