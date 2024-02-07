@@ -1,7 +1,32 @@
-<nav>
-  <ul>
-    <li><a routerLink="/login">Obras</a></li>
-    <li><a routerLink="/listActivity">Profile</a></li>
-    <!-- Adicione outros itens de menu conforme necessário -->
-  </ul>
-</nav>
+<p-sidebar [(visible)]="displaySidebarMenu" [position]="'left'">
+
+  <ng-template pTemplate="header">Header Content</ng-template>
+  <ng-template pTemplate="content">
+    <p-accordion [multiple]="true">
+      <p-accordionTab header="Header I" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
+        iconPos="end">
+        <div class="item-menu" routerLink="/">Home</div>
+        <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
+        <p-accordionTab header="Sub Header I" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
+          iconPos="end">
+          <div class="item-menu" routerLink="/">Home</div>
+          <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
+        </p-accordionTab>
+      </p-accordionTab>
+      <p-accordionTab header="Header II" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
+        iconPos="end">
+        <div class="item-menu" routerLink="/">Home</div>
+        <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
+      </p-accordionTab>
+      <div class="item-menu" routerLink="/">Home</div>
+      <p-accordionTab header="Header III" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
+        iconPos="end">
+        <div class="item-menu" routerLink="/">Home</div>
+        <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
+      </p-accordionTab>
+    </p-accordion>
+
+  </ng-template>
+
+  <ng-template pTemplate="footer">Footer Content</ng-template>
+</p-sidebar>

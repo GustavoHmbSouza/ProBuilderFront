@@ -1,13 +1,9 @@
-<app-header *ngIf="mostrarMenuLateral"></app-header>
+<app-header *ngIf="mostrarMenuLateral" (menuChange)="menuChange()"></app-header>
 <div style="display: flex; height: 90%;">
-  <app-lateral-menu *ngIf="mostrarMenuLateral">menu lateral</app-lateral-menu>
-  <router-outlet />
+  <app-lateral-menu>menu lateral</app-lateral-menu>
+  <router-outlet routerLinkActiveOptions="{ exact: true }" />
 </div>
 <i class="material-icons">add</i>
 <div style="height: 5%;">futuro footer</div>
 <p-button label="Submit"></p-button>
 <p-button label="Link" [link]="true"></p-button>
-
-
-
-<button (click)="displaySidebar = !displaySidebar">Toggle Sidebar</button>

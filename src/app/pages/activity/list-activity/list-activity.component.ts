@@ -16,7 +16,6 @@ export class ListActivityComponent implements OnInit {
   ngOnInit() {
     this.constructService.getActivity().subscribe(users => {
       this.activities = users;
-      console.log(this.activities)
     });
   }
 
