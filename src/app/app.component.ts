@@ -5,7 +5,7 @@ import { LateralMenuComponent } from './pages/lateral-menu/lateral-menu.componen
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   @ViewChild(LateralMenuComponent) lateralMenuComponent!: LateralMenuComponent;

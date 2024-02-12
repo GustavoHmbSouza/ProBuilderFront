@@ -10,18 +10,19 @@ export class LateralMenuComponent {
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
   customHeaderStyle = {
-    'color': '#333', // Cor do texto personalizada para o cabeçalho
-    'border': 'none', // Borda personalizada para o conteúdo
+    'background-color': '#2a323d',
+    'color': 'white',
+    'border': 'none',
     'padding': '1rem 1rem 1rem 0.5rem'
-
   };
 
   customContentStyle = {
-    'background-color': 'white', // Cor de fundo personalizada para o conteúdo
-    'border': 'none', // Borda personalizada para o conteúdo
+    'background-color': '#2a323d',
+    'color': 'white',
+    'border': 'none',
     'padding': '0 0.5rem 0 0.5rem'
-
   };
+
 
   sidebarVisible: boolean = false;
 
