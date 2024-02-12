@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'listActivity',
     loadChildren: () => import('./pages/activity/list-activity/list-activity.module').then(m => m.ListActivityModule),
   },
+  {
+    path: 'listConstruct',
+    loadChildren: () => import('./pages/construction/dash-construct/dash-construction.module').then(m => m.DashConstructionModule),
+  },
 
 ];
 

@@ -19,7 +19,7 @@ export class LateralMenuComponent {
   customContentStyle = {
     'background-color': 'white', // Cor de fundo personalizada para o conteúdo
     'border': 'none', // Borda personalizada para o conteúdo
-    'padding': '0 0.5rem 0 1.5rem'
+    'padding': '0 0.5rem 0 0.5rem'
 
   };
 

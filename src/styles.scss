@@ -1,11 +1,12 @@
 @import 'primeicons/primeicons.css';
 @import 'primeng/resources/themes/saga-blue/theme.css';
 @import 'primeng/resources/primeng.min.css';
+@import './stylesVariables.scss';
 
 html,
 body {
   height: 100%;
   margin: 0;
-
+  background-color: $secondary-color;
 
 }

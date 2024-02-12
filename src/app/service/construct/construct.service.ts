@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { mockConstruct } from '../mock/mockConstruct';
+import { IConstruct } from '../../models/interfaces/construct.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +18,9 @@ export class ConstructService {
   getActivity(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/ATIVIDADES`);
   }
+
+  getConstruct(): Observable<IConstruct[]> {
+    return of(mockConstruct)
+  }
+
 }
