@@ -1,5 +1,6 @@
 <div class="layout-sidebar">
-  <div [ngClass]="{'layout-sidebar-open': displaySidebarMenu, 'layout-sidebar-close': !displaySidebarMenu}">
+  <div [ngClass]="{'div-sidebar-open': displaySidebarMenu}" class="div-sidebar"></div>
+  <div [ngClass]="{'layout-sidebar-close': !displaySidebarMenu}" class="layout-sidebar">
     <p-accordion [multiple]="true">
       <p-accordionTab header="Header I" iconPos="end">
         <div class="item-menu" routerLink="/">Home 1</div>

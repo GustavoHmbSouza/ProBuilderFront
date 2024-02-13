@@ -1,6 +1,11 @@
 @import '../../../stylesVariables.scss';
 
 .layout-sidebar {
+  height: 100%;
+
+  --width-side-menu: 19rem;
+  --margin-side-menu: 2.5vh;
+
   .item-menu {
     padding: 0.5rem;
     color: white;
@@ -15,31 +20,32 @@
     border-radius: 12px;
   }
 
-  .layout-sidebar-open {
-    width: 300px;
-    height: 95%;
-    margin: 2.5vh;
+  .div-sidebar-open {
+    margin-left: calc(var(--width-side-menu) + var(--margin-side-menu));
+  }
+
+  .div-sidebar {
+    transition: margin-left .2s;
+  }
+
+  .layout-sidebar {
+    position: fixed;
+    width: var(--width-side-menu);
+    height: 85%;
     overflow-y: auto;
     -webkit-user-select: none;
     user-select: none;
-    top: 7rem;
-    left: 2rem;
+    left: var(--margin-side-menu);
     transition: transform .2s, left .2s;
     background-color: $primary-color;
     border-radius: 12px;
     padding: 0.5rem 1.5rem;
-    box-shadow: 0 3px 5px #00000005, 0 0 2px #0000000d, 0 1px 4px #00000014;
+    margin: var(--margin-side-menu) 0;
   }
 
   .layout-sidebar-close {
-    width: 300px;
-    height: 95%;
-    border-radius: 12px;
-    margin: 2.5vh 0;
-    background-color: $primary-color;
+    left: 0rem;
     transform: translate(-100%);
-    left: 0;
-    transition: transform .2s, left .2s;
   }
 
 
