@@ -1,27 +1,17 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Sidebar } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-lateral-menu',
   templateUrl: './lateral-menu.component.html',
-  styleUrl: './lateral-menu.component.scss'
+  styleUrl: './lateral-menu.component.scss',
+  encapsulation: ViewEncapsulation.None
+
 })
 export class LateralMenuComponent {
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
-  customHeaderStyle = {
-    'background-color': '#2a323d',
-    'color': 'white',
-    'border': 'none',
-    'padding': '1rem 1rem 1rem 0.5rem'
-  };
 
-  customContentStyle = {
-    'background-color': '#2a323d',
-    'color': 'white',
-    'border': 'none',
-    'padding': '0 0.5rem 0 0.5rem'
-  };
 
 
   sidebarVisible: boolean = false;
@@ -30,6 +20,11 @@ export class LateralMenuComponent {
 
   alterDisplaySideBarMenu() {
     this.displaySidebarMenu = !this.displaySidebarMenu;
+  }
+
+  ngOnInit() {
+
+
   }
 }
 

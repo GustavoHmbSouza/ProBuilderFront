@@ -22,7 +22,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     AvatarModule,
     AccordionModule,
     MenuModule,
-    PanelMenuModule
+    PanelMenuModule,
   ],
   exports: [LateralMenuComponent]
 })

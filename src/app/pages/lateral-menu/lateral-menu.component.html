@@ -1,26 +1,23 @@
-<div class="layout-sidebar"
-  [ngClass]="{'layout-sidebar-open': displaySidebarMenu, 'layout-sidebar-close': !displaySidebarMenu}">
-  <p-accordion [multiple]="true">
-    <p-accordionTab header="Header I" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
-      iconPos="end">
-      <div class="item-menu" routerLink="/">Home 1</div>
-      <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
-      <p-accordionTab header="Sub Header I" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
-        iconPos="end">
-        <div class="item-menu" routerLink="/">Home 2</div>
+<div class="layout-sidebar">
+  <div [ngClass]="{'layout-sidebar-open': displaySidebarMenu, 'layout-sidebar-close': !displaySidebarMenu}">
+    <p-accordion [multiple]="true">
+      <p-accordionTab header="Header I" iconPos="end">
+        <div class="item-menu" routerLink="/">Home 1</div>
+        <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
+        <p-accordionTab header="Sub Header I" iconPos="end">
+          <div class="item-menu" routerLink="/">Home 2</div>
+          <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
+        </p-accordionTab>
+      </p-accordionTab>
+      <p-accordionTab header="Header II" iconPos="end">
+        <div class="item-menu" routerLink="/">Home 3</div>
         <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
       </p-accordionTab>
-    </p-accordionTab>
-    <p-accordionTab header="Header II" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
-      iconPos="end">
-      <div class="item-menu" routerLink="/">Home 3</div>
-      <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
-    </p-accordionTab>
-    <div class="item-menu" routerLink="/listConstruct">Obras</div>
-    <p-accordionTab header="Header III" [headerStyle]="customHeaderStyle" [contentStyle]="customContentStyle"
-      iconPos="end">
-      <div class="item-menu" routerLink="/">Home 5</div>
-      <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
-    </p-accordionTab>
-  </p-accordion>
+      <div class="item-menu" routerLink="/listConstruct">Obras</div>
+      <p-accordionTab header="Header III" iconPos="end">
+        <div class="item-menu" routerLink="/">Home 5</div>
+        <div class="item-menu" routerLink="/listActivity">lista de atividades</div>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
 </div>
