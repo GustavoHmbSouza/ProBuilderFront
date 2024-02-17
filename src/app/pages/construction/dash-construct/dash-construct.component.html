@@ -1,5 +1,8 @@
-<div>
-  <p-toast></p-toast>
-  <p-tree [layout]="'horizontal'" [value]="construct" class="w-full md:w-30rem" selectionMode="single"
-    [(selection)]="selectedFile" (onNodeSelect)="nodeSelect($event)" (onNodeUnselect)="nodeUnselect($event)"></p-tree>
+<div class="dash-construct">
+  <p-card>
+    <p-toast></p-toast>
+    <p-tree [layout]="'horizontal'" [value]="construct" selectionMode="single" (onNodeSelect)="nodeSelect($event)"
+      (onNodeUnselect)="nodeUnselect($event)"></p-tree>
+  </p-card>
+
 </div>

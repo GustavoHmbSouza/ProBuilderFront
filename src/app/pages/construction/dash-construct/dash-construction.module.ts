@@ -7,6 +7,7 @@ import { ToastModule } from 'primeng/toast';
 import { RouterModule, Routes } from '@angular/router';
 import { ConstructService } from '../../../service/construct/construct.service';
 import { MessageService } from 'primeng/api';
+import { CardModule } from 'primeng/card';
 
 const routes: Routes = [
   { path: '', component: DashConstructComponent }
@@ -18,7 +19,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     TreeModule,
-    ToastModule
+    ToastModule,
+    CardModule
   ],
   providers: [ConstructService, MessageService]
 })
