@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
-import { mockProducts } from '../../../service/mock/products';
+import { mockProducts } from '../../service/mock/products';
 
-interface InventoryStatus {
-  label: string;
-  value: string;
-}
 export interface Product {
   id?: string;
   code?: string;
@@ -22,23 +18,23 @@ export interface Product {
 
 
 @Component({
-  selector: 'app-create-activity',
-  templateUrl: './create-activity.component.html',
-  styleUrl: './create-activity.component.css'
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrl: './user.component.css'
 })
-export class CreateActivityComponent implements OnInit {
+export class UserComponent implements OnInit {
 
   productDialog: boolean = false;
 
   deleteProductDialog: boolean = false;
 
-  deleteDialog: boolean = false;
+  deleteProductsDialog: boolean = false;
 
   products: Product[] = [];
 
   product: Product = {};
 
-  selected: Product[] = [];
+  selectedProducts: Product[] = [];
 
   submitted: boolean = false;
 
@@ -74,8 +70,8 @@ export class CreateActivityComponent implements OnInit {
     this.productDialog = true;
   }
 
-  deleteSelected() {
-    this.deleteDialog = true;
+  deleteSelectedProducts() {
+    this.deleteProductsDialog = true;
   }
 
   editProduct(product: Product) {
@@ -89,10 +85,10 @@ export class CreateActivityComponent implements OnInit {
   }
 
   confirmDeleteSelected() {
-    this.deleteDialog = false;
-    this.products = this.products.filter(val => !this.selected.includes(val));
+    this.deleteProductsDialog = false;
+    this.products = this.products.filter(val => !this.selectedProducts.includes(val));
     this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Products Deleted', life: 3000 });
-    this.selected = [];
+    this.selectedProducts = [];
   }
 
   confirmDelete() {

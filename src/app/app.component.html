@@ -1,4 +1,6 @@
-<app-header @if (mostrarMenuLateral) (menuChange)="menuChange()"></app-header>
+@if(mostrarMenuLateral) {
+<app-header (menuChange)="menuChange()"></app-header>
+}
 <div style="display: flex; height: 90%;">
   <app-lateral-menu>menu lateral</app-lateral-menu>
   <router-outlet routerLinkActiveOptions="{ exact: true }"></router-outlet>

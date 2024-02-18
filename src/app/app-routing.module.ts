@@ -16,7 +16,10 @@ const routes: Routes = [
     path: 'listConstruct',
     loadChildren: () => import('./pages/construction/dash-construct/dash-construction.module').then(m => m.DashConstructionModule),
   },
-
+  {
+    path: 'templateCrud',
+    loadChildren: () => import('./pages/activity/create-activity/create-activity.module').then(m => m.CreateActivityModule),
+  },
 ];
 
 @NgModule({
