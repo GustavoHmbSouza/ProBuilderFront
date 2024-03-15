@@ -7,7 +7,7 @@ import { INodeConstruct } from '../../models/interfaces/INodeConstruct.interface
 @Injectable({
   providedIn: 'root'
 })
-export class ConstructService {
+export class NodeConstructService {
 
   private apiUrl = 'https://65b2b3099bfb12f6eafe4bc5.mockapi.io/api/v1'; // URL da sua API
 

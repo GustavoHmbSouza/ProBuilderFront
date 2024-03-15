@@ -5,7 +5,7 @@ import { DashConstructComponent } from './dash-construct.component';
 import { TreeModule } from 'primeng/tree';
 import { ToastModule } from 'primeng/toast';
 import { RouterModule, Routes } from '@angular/router';
-import { ConstructService } from '../../../service/nodeConstruct/nodeConstruct.service';
+import { NodeConstructService } from '../../../service/nodeConstruct/nodeConstruct.service';
 import { MessageService } from 'primeng/api';
 import { CardModule } from 'primeng/card';
 
@@ -22,6 +22,6 @@ const routes: Routes = [
     ToastModule,
     CardModule
   ],
-  providers: [ConstructService, MessageService]
+  providers: [NodeConstructService, MessageService]
 })
 export class DashConstructionModule { }

@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ListConstructionComponent } from './list-construction.component';
+import { ConstructService } from '../../../service/construct/construct.service';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
+import { CardModule } from 'primeng/card';
 
 
 const routes: Routes = [
@@ -14,7 +18,11 @@ const routes: Routes = [
   declarations: [ListConstructionComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ToastModule,
+    CardModule
   ],
+  providers: [ConstructService, MessageService]
+
 })
-export class ListActivityModule { }
+export class ListConstructionModule { }

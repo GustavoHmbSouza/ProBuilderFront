@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ConstructService } from '../../../service/nodeConstruct/nodeConstruct.service';
 
 @Component({
   selector: 'app-list-activity',
@@ -8,7 +7,6 @@ import { ConstructService } from '../../../service/nodeConstruct/nodeConstruct.s
 })
 export class ListActivityComponent {
 
-  constructor(private constructService: ConstructService) { }
 
   sceneEnumSelected: string = '';
   activities: any;

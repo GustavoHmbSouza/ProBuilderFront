@@ -13,8 +13,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/activity/list-activity/list-activity.module').then(m => m.ListActivityModule),
   },
   {
-    path: 'listConstruct',
+    path: 'dashConstruct',
     loadChildren: () => import('./pages/construction/dash-construct/dash-construction.module').then(m => m.DashConstructionModule),
+  },
+  {
+    path: 'listConstruct',
+    loadChildren: () => import('./pages/construction/list-construction/list-construction.module').then(m => m.ListConstructionModule),
   },
   {
     path: 'templateCrud',

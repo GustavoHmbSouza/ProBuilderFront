@@ -1,6 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MessageService, TreeNode } from 'primeng/api';
-import { ConstructService } from '../../../service/nodeConstruct/nodeConstruct.service';
+import { NodeConstructService } from '../../../service/nodeConstruct/nodeConstruct.service';
 import { retry } from 'rxjs';
 import { INodeConstruct } from '../../../models/interfaces/INodeConstruct.interface';
 
@@ -10,15 +10,15 @@ import { INodeConstruct } from '../../../models/interfaces/INodeConstruct.interf
   styleUrl: './dash-construct.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class DashConstructComponent {
+export class DashConstructComponent implements OnInit {
   nodeConstruct!: TreeNode[];
 
   selectedFile!: TreeNode;
 
-  constructor(private constructService: ConstructService, private messageService: MessageService) { }
+  constructor(private nodeConstructService: NodeConstructService, private messageService: MessageService) { }
 
   ngOnInit() {
-    this.getConstructData();
+    this.getNodeConstructData();
   }
 
   nodeSelect(event: any) {
@@ -34,8 +34,8 @@ export class DashConstructComponent {
     }
   }
 
-  getConstructData(): void {
-    this.constructService.getNodeConstruct()
+  getNodeConstructData(): void {
+    this.nodeConstructService.getNodeConstruct()
       .pipe(
         retry(1)
       )
