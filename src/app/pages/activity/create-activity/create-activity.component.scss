@@ -1,0 +1,55 @@
+@import '../../../../stylesVariables.scss';
+
+app-create-activity {
+  width: 100%;
+  height: 100%;
+
+  .content-crud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+
+
+    p-card {
+      width: 100%;
+      height: 100%;
+
+      .p-card {
+        background-color: $primary-color;
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $terciary-color;
+      }
+
+      .p-card-body,
+      .p-card-content {
+        height: 100%
+      }
+
+      .p-card-content {
+        overflow: auto;
+      }
+
+      .p-toolbar,
+      .p-datatable-header,
+      td,
+      th,
+      .p-paginator {
+        background-color: $primary-color;
+        border: none;
+        color: white;
+      }
+
+      td {
+        border-top: 1px solid $terciary-color;
+      }
+    }
+
+
+    .p-datatable-wrapper {}
+  }
+}

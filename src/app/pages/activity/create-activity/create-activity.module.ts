@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { CreateActivityComponent } from './create-activity.component';
 import { CommonModule } from '@angular/common';
@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { FileUploadModule } from 'primeng/fileupload';
 import { ButtonModule } from 'primeng/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RippleModule } from 'primeng/ripple';
 import { ToastModule } from 'primeng/toast';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -18,6 +18,9 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { MessageService } from 'primeng/api';
+import { CardModule } from 'primeng/card';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 const routes: Routes = [
   { path: '', component: CreateActivityComponent }
@@ -43,9 +46,16 @@ const routes: Routes = [
     DropdownModule,
     RadioButtonModule,
     InputNumberModule,
-    DialogModule
+    DialogModule,
+    CardModule,
+    ToggleButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MultiSelectModule
   ],
-  providers: [MessageService]
+
+  providers: [MessageService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
 

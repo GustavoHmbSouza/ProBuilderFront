@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { mockProducts } from '../../../service/mock/products';
@@ -20,11 +20,18 @@ export interface Product {
   rating?: number;
 }
 
+interface Column {
+  field: string;
+  header: string;
+}
+
 
 @Component({
   selector: 'app-create-activity',
   templateUrl: './create-activity.component.html',
-  styleUrl: './create-activity.component.css'
+  styleUrl: './create-activity.component.scss',
+  encapsulation: ViewEncapsulation.None
+
 })
 export class CreateActivityComponent implements OnInit {
 
@@ -42,11 +49,16 @@ export class CreateActivityComponent implements OnInit {
 
   submitted: boolean = false;
 
-  cols: any[] = [];
+  cols!: Column[];
 
   statuses: any[] = [];
 
   rowsPerPageOptions = [5, 10, 20];
+
+
+  //column Toggle
+  selectedColumns!: Column[];
+
 
   constructor(private messageService: MessageService) { }
 
@@ -54,18 +66,14 @@ export class CreateActivityComponent implements OnInit {
     this.products = mockProducts;
 
     this.cols = [
-      { field: 'product', header: 'Product' },
+      { field: 'code', header: 'Code' },
+      { field: 'name', header: 'Name' },
       { field: 'price', header: 'Price' },
-      { field: 'category', header: 'Category' },
-      { field: 'rating', header: 'Reviews' },
-      { field: 'inventoryStatus', header: 'Status' }
+      { field: 'category', header: 'Category' }
     ];
 
-    this.statuses = [
-      { label: 'INSTOCK', value: 'instock' },
-      { label: 'LOWSTOCK', value: 'lowstock' },
-      { label: 'OUTOFSTOCK', value: 'outofstock' }
-    ];
+    this.selectedColumns = this.cols;
+
   }
 
   openNew() {
