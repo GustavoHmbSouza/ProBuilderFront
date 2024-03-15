@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ConstructService } from './construct.service';
+import { ConstructService } from './nodeConstruct.service';
 
 describe('ConstructService', () => {
   let service: ConstructService;

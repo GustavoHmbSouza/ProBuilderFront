@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MessageService, TreeNode } from 'primeng/api';
-import { ConstructService } from '../../../service/construct/construct.service';
+import { ConstructService } from '../../../service/nodeConstruct/nodeConstruct.service';
 import { retry } from 'rxjs';
-import { IConstruct } from '../../../models/interfaces/construct.interface';
+import { INodeConstruct } from '../../../models/interfaces/INodeConstruct.interface';
 
 @Component({
   selector: 'app-dash-construct',
@@ -11,7 +11,7 @@ import { IConstruct } from '../../../models/interfaces/construct.interface';
   encapsulation: ViewEncapsulation.None
 })
 export class DashConstructComponent {
-  construct!: TreeNode[];
+  nodeConstruct!: TreeNode[];
 
   selectedFile!: TreeNode;
 
@@ -35,13 +35,13 @@ export class DashConstructComponent {
   }
 
   getConstructData(): void {
-    this.constructService.getConstruct()
+    this.constructService.getNodeConstruct()
       .pipe(
         retry(1)
       )
       .subscribe(
-        (construct: IConstruct[]) => {
-          this.construct = construct;
+        (nodeConstruct: INodeConstruct[]) => {
+          this.nodeConstruct = nodeConstruct;
         },
         error => {
           console.error('Erro ao obter dados do backend:', error);

@@ -1,70 +1,121 @@
-import { IConstruct } from "../../models/interfaces/construct.interface";
+import { IConstruct } from "../../models/interfaces/IConstruct.terface";
 
-export const mockConstruct: IConstruct[] = [{
-  label: 'Obra',
-  children: [
-    {
-      label: 'Bloco A (Azul)',
-      children: [
-        {
-          label: 'Andar 1',
-          children: [
-            { label: 'Apartamento 101', id_residence: '1' },
-            { label: 'Apartamento 102', id_residence: '2' },
-            { label: 'Apartamento 103', id_residence: '3' },
-            { label: 'Apartamento 104', id_residence: '4' },
-          ]
-        },
-        {
-          label: 'Andar 2',
-          children: [
-            { label: 'Apartamento 201', id_residence: '5' },
-            { label: 'Apartamento 202', id_residence: '6' },
-            { label: 'Apartamento 203', id_residence: '7' },
-            { label: 'Apartamento 204', id_residence: '8' },
-          ]
-        },
-        {
-          label: 'Andar 3',
-          children: [
-            { label: 'Apartamento 301', id_residence: '9' },
-            { label: 'Apartamento 302', id_residence: '10' },
-            { label: 'Apartamento 303', id_residence: '11' },
-            { label: 'Apartamento 304', id_residence: '12' },
-          ]
-        },
-        {
-          label: 'Andar 4',
-          children: [
-            { label: 'Apartamento 401', id_residence: '13' },
-            { label: 'Apartamento 402', id_residence: '14' },
-            { label: 'Apartamento 403', id_residence: '15' },
-            { label: 'Apartamento 404', id_residence: '16' },
-          ]
-        }
-      ]
-    },
-    {
-      label: 'Bloco B (Azul)',
-      children: [
-        { label: 'Apartamento 101', id_residence: '17' },
-        { label: 'Apartamento 102', id_residence: '18' },
-        { label: 'Apartamento 103', id_residence: '19' },
-        { label: 'Apartamento 104', id_residence: '20' },
-        { label: 'Apartamento 201', id_residence: '21' },
-        { label: 'Apartamento 202', id_residence: '22' },
-        { label: 'Apartamento 203', id_residence: '23' },
-        { label: 'Apartamento 204', id_residence: '24' },
-        { label: 'Apartamento 301', id_residence: '25' },
-        { label: 'Apartamento 302', id_residence: '26' },
-        { label: 'Apartamento 303', id_residence: '27' },
-        { label: 'Apartamento 304', id_residence: '28' },
-        { label: 'Apartamento 401', id_residence: '29' },
-        { label: 'Apartamento 402', id_residence: '30' },
-        { label: 'Apartamento 403', id_residence: '31' },
-        { label: 'Apartamento 404', id_residence: '32' },
-      ]
-    }
-  ]
-},
+export const mockConstruct: IConstruct[] = [
+  {
+    name: 'Sample Project 1',
+    description: 'This is a sample project description.',
+    address: '123 Main St, City, Country',
+    startDate: '2024-01-01',
+    endDateEstimated: '2024-12-31',
+    manager: 'John Doe',
+    budget: '$100,000',
+    status: 'In Progress',
+    client: 'ABC Company',
+    projectType: 'Construction',
+    notes: 'This is a sample project notes.'
+  },
+  {
+    name: 'Sample Project 2',
+    description: 'This is a sample project description.',
+    address: '456 Elm St, City, Country',
+    startDate: '2024-02-01',
+    endDateEstimated: '2024-12-31',
+    manager: 'Jane Smith',
+    budget: '$150,000',
+    status: 'Completed',
+    client: 'XYZ Corporation',
+    projectType: 'Renovation',
+    notes: 'This is another sample project notes.'
+  },
+  {
+    name: 'Sample Project 10',
+    description: 'This is a sample project description.',
+    address: '789 Oak St, City, Country',
+    startDate: '2024-10-01',
+    endDateEstimated: '2025-06-30',
+    manager: 'Michael Johnson',
+    budget: '$200,000',
+    status: 'Planned',
+    client: '123 Corporation',
+    projectType: 'Infrastructure',
+    notes: 'Yet another sample project notes.'
+  },
+  {
+    name: 'Sample Project 1',
+    description: 'This is a sample project description.',
+    address: '123 Main St, City, Country',
+    startDate: '2024-01-01',
+    endDateEstimated: '2024-12-31',
+    manager: 'John Doe',
+    budget: '$100,000',
+    status: 'In Progress',
+    client: 'ABC Company',
+    projectType: 'Construction',
+    notes: 'This is a sample project notes.'
+  },
+  {
+    name: 'Sample Project 2',
+    description: 'This is a sample project description.',
+    address: '456 Elm St, City, Country',
+    startDate: '2024-02-01',
+    endDateEstimated: '2024-12-31',
+    manager: 'Jane Smith',
+    budget: '$150,000',
+    status: 'Completed',
+    client: 'XYZ Corporation',
+    projectType: 'Renovation',
+    notes: 'This is another sample project notes.'
+  },
+  {
+    name: 'Sample Project 10',
+    description: 'This is a sample project description.',
+    address: '789 Oak St, City, Country',
+    startDate: '2024-10-01',
+    endDateEstimated: '2025-06-30',
+    manager: 'Michael Johnson',
+    budget: '$200,000',
+    status: 'Planned',
+    client: '123 Corporation',
+    projectType: 'Infrastructure',
+    notes: 'Yet another sample project notes.'
+  },
+  {
+    name: 'Sample Project 1',
+    description: 'This is a sample project description.',
+    address: '123 Main St, City, Country',
+    startDate: '2024-01-01',
+    endDateEstimated: '2024-12-31',
+    manager: 'John Doe',
+    budget: '$100,000',
+    status: 'In Progress',
+    client: 'ABC Company',
+    projectType: 'Construction',
+    notes: 'This is a sample project notes.'
+  },
+  {
+    name: 'Sample Project 2',
+    description: 'This is a sample project description.',
+    address: '456 Elm St, City, Country',
+    startDate: '2024-02-01',
+    endDateEstimated: '2024-12-31',
+    manager: 'Jane Smith',
+    budget: '$150,000',
+    status: 'Completed',
+    client: 'XYZ Corporation',
+    projectType: 'Renovation',
+    notes: 'This is another sample project notes.'
+  },
+  {
+    name: 'Sample Project 10',
+    description: 'This is a sample project description.',
+    address: '789 Oak St, City, Country',
+    startDate: '2024-10-01',
+    endDateEstimated: '2025-06-30',
+    manager: 'Michael Johnson',
+    budget: '$200,000',
+    status: 'Planned',
+    client: '123 Corporation',
+    projectType: 'Infrastructure',
+    notes: 'Yet another sample project notes.'
+  }
 ];
