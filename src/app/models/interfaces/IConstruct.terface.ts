@@ -8,6 +8,4 @@ export interface IConstruct {
   budget: string;
   status: string;
   client: string;
-  projectType: string;
-  notes: string;
 }

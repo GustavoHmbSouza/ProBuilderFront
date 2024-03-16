@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/construction/list-construction/list-construction.module').then(m => m.ListConstructionModule),
   },
   {
+    path: 'addConstruct',
+    loadChildren: () => import('./pages/construction/add-construct/add-construct.module').then(m => m.AddConstructionModule),
+  },
+  {
     path: 'templateCrud',
     loadChildren: () => import('./pages/activity/create-activity/create-activity.module').then(m => m.CreateActivityModule),
   },

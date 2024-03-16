@@ -1,0 +1,57 @@
+<div class="add-construct">
+  <p-card>
+    <form [formGroup]="formAddConstruct">
+      <div class="inputs-form">
+        <div>
+          <div for="name" class="label-input-form">Nome:</div>
+          <input type="text" formControlName="name" class="input-text-form">
+        </div>
+
+        <div>
+          <div for="description" class="label-input-form">Descrição:</div>
+          <input type="text" formControlName="description" class="input-text-form">
+        </div>
+
+        <div>
+          <div for="address" class="label-input-form">Endereço:</div>
+          <input type="text" formControlName="address" class="input-text-form">
+        </div>
+
+        <div>
+          <div for="startDate" class="label-input-form">Data inicio:</div>
+          <input type="date" formControlName="startDate" class="input-text-form">
+        </div>
+
+        <div>
+          <div for="endDateEstimated" class="label-input-form">Data final estimada:</div>
+          <input type="date" formControlName="endDateEstimated" class="input-text-form">
+        </div>
+
+        <div>
+          <div for="manager" class="label-input-form">Responsável:</div>
+          <input type="text" formControlName="manager" class="input-text-form">
+        </div>
+
+        <div>
+          <div for="budget" class="label-input-form">Orçamento:</div>
+          <p-inputNumber [(ngModel)]="value4" inputId="minmax" mode="decimal" [min]="0" [max]="100"
+            [maxFractionDigits]="2"> </p-inputNumber>
+        </div>
+
+        <div>
+          <div for="status" class="label-input-form">Status:</div>
+          <input type="text" formControlName="status" class="input-text-form">
+        </div>
+
+        <div>
+          <div for="client" class="label-input-form">Cliente:</div>
+          <input type="text" formControlName="client" class="input-text-form">
+        </div>
+      </div>
+
+      <div class="buttons-form">
+        <p-button label="Submit" (click)="submitForm()"></p-button>
+      </div>
+    </form>
+  </p-card>
+</div>

@@ -10,9 +10,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'John Doe',
     budget: '$100,000',
     status: 'In Progress',
-    client: 'ABC Company',
-    projectType: 'Construction',
-    notes: 'This is a sample project notes.'
+    client: 'ABC Company'
   },
   {
     name: 'Sample Project 1',
@@ -23,9 +21,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'John Doe',
     budget: '$100,000',
     status: 'In Progress',
-    client: 'ABC Company',
-    projectType: 'Construction',
-    notes: 'This is a sample project notes.'
+    client: 'ABC Company'
   },
   {
     name: 'Sample Project 1',
@@ -36,9 +32,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'John Doe',
     budget: '$100,000',
     status: 'In Progress',
-    client: 'ABC Company',
-    projectType: 'Construction',
-    notes: 'This is a sample project notes.'
+    client: 'ABC Company'
   },
   {
     name: 'Sample Project 2',
@@ -49,9 +43,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'Jane Smith',
     budget: '$150,000',
     status: 'Completed',
-    client: 'XYZ Corporation',
-    projectType: 'Renovation',
-    notes: 'This is another sample project notes.'
+    client: 'XYZ Corporation'
   },
   {
     name: 'Sample Project 10',
@@ -62,9 +54,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'Michael Johnson',
     budget: '$200,000',
     status: 'Planned',
-    client: '123 Corporation',
-    projectType: 'Infrastructure',
-    notes: 'Yet another sample project notes.'
+    client: '123 Corporation'
   },
   {
     name: 'Sample Project 1',
@@ -75,9 +65,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'John Doe',
     budget: '$100,000',
     status: 'In Progress',
-    client: 'ABC Company',
-    projectType: 'Construction',
-    notes: 'This is a sample project notes.'
+    client: 'ABC Company'
   },
   {
     name: 'Sample Project 2',
@@ -88,9 +76,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'Jane Smith',
     budget: '$150,000',
     status: 'Completed',
-    client: 'XYZ Corporation',
-    projectType: 'Renovation',
-    notes: 'This is another sample project notes.'
+    client: 'XYZ Corporation'
   },
   {
     name: 'Sample Project 10',
@@ -101,9 +87,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'Michael Johnson',
     budget: '$200,000',
     status: 'Planned',
-    client: '123 Corporation',
-    projectType: 'Infrastructure',
-    notes: 'Yet another sample project notes.'
+    client: '123 Corporation'
   },
   {
     name: 'Sample Project 1',
@@ -114,9 +98,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'John Doe',
     budget: '$100,000',
     status: 'In Progress',
-    client: 'ABC Company',
-    projectType: 'Construction',
-    notes: 'This is a sample project notes.'
+    client: 'ABC Company'
   },
   {
     name: 'Sample Project 2',
@@ -127,9 +109,7 @@ export const mockConstruct: IConstruct[] = [
     manager: 'Jane Smith',
     budget: '$150,000',
     status: 'Completed',
-    client: 'XYZ Corporation',
-    projectType: 'Renovation',
-    notes: 'This is another sample project notes.'
+    client: 'XYZ Corporation'
   },
   {
     name: 'Sample Project 10',
@@ -140,8 +120,6 @@ export const mockConstruct: IConstruct[] = [
     manager: 'Michael Johnson',
     budget: '$200,000',
     status: 'Planned',
-    client: '123 Corporation',
-    projectType: 'Infrastructure',
-    notes: 'Yet another sample project notes.'
+    client: '123 Corporation'
   }
 ];
